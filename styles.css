@@ -1,0 +1,107 @@
+/* Body and background */
+body {
+    background: linear-gradient(to right, #1c1c1c, #2f2f2f);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Game container */
+#game {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    width: 60%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Stats container */
+#stats,
+#monsterStats,
+#controls {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+}
+
+#stats .stat,
+#monsterStats .stat {
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    background: linear-gradient(to top, #4caf50, #2e7d32);
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Alien stats */
+#monsterStats {
+    display: none;
+    background-color: #ff4d4d;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+/* Text container */
+#text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+/* Adding the defeated message animation */
+.defeated-message {
+    font-size: 18px;
+    color: #00ff00;
+    animation: messageAnimation 2s ease-in-out;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+@keyframes messageAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
